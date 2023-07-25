@@ -1,0 +1,11 @@
+### Laravel ###
+.env
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+.Trashes
+
+### IDE's ###
+.idea
