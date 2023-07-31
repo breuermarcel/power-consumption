@@ -5,6 +5,7 @@ namespace Breuermarcel\PowerConsumption\Models;
 use Breuermarcel\PowerConsumption\Scopes\AuthUserScope;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class WaterConsumption extends Model
 {
