@@ -9,11 +9,9 @@ class DashboardController extends Controller
 {
     public function __invoke()
     {
-        $consumption = [];
+        $electricity = ElectricityConsumption::all();
+        $water = WaterConsumption::all();
 
-        $consumption["electricity"] = ElectricityConsumption::all();
-        $consumption["water"] = WaterConsumption::all();
-
-        return view("power-consumption::dashboard", compact("consumption"));
+        return view("power-consumption::dashboard", compact("electricity", "water"));
     }
 }
