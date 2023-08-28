@@ -9,15 +9,15 @@ class PowerConsumptionServiceProvider extends IlluminateServiceProvider
 {
     public function boot()
     {
-        $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang', 'power-consumption');
-        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'power-consumption');
-        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+        $this->loadTranslationsFrom(__DIR__.'/../../resources/lang', 'power-consumption');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'power-consumption');
+        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
         $this->registerRoutes();
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../../config/power-consumption.php', 'power-consumption');
+        $this->mergeConfigFrom(__DIR__.'/../../config/power-consumption.php', 'power-consumption');
     }
 
     private function routeConfiguration(): array
@@ -32,7 +32,7 @@ class PowerConsumptionServiceProvider extends IlluminateServiceProvider
     private function registerRoutes()
     {
         Route::group($this->routeConfiguration(), function () {
-            $this->loadRoutesFrom(__DIR__ . '/../routes.php');
+            $this->loadRoutesFrom(__DIR__.'/../routes.php');
         });
     }
 }
