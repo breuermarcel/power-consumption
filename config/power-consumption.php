@@ -1,14 +1,14 @@
 <?php
 
 return [
-    "name" => "power-consumption",
+    'name' => 'power-consumption',
 
-    "routing" => [
-        "prefix" => "power-consumption",
-        "as" => "power-consumption.",
-        "middleware" => [
-            "web",
-            "auth"
-        ]
-    ]
+    'routing' => [
+        'prefix' => 'power-consumption',
+        'as' => 'power-consumption.',
+        'middleware' => [
+            'web',
+            'auth',
+        ],
+    ],
 ];

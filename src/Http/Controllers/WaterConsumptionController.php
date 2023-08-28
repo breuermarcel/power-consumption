@@ -2,8 +2,8 @@
 
 namespace Breuermarcel\PowerConsumption\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Breuermarcel\PowerConsumption\Models\WaterConsumption;
+use Illuminate\Http\Request;
 
 class WaterConsumptionController extends Controller
 {
@@ -12,12 +12,12 @@ class WaterConsumptionController extends Controller
         // todo scope auth user
         $waterConsumptions = WaterConsumption::all();
 
-        return view("power-consumption::water.index", compact("waterConsumptions"));
+        return view('power-consumption::water.index', compact('waterConsumptions'));
     }
 
     public function create()
     {
-        return view("power-consumption::water.create");
+        return view('power-consumption::water.create');
     }
 
     public function store(Request $request)
@@ -25,12 +25,12 @@ class WaterConsumptionController extends Controller
         // todo validate
         WaterConsumption::create($request->all());
 
-        return to_route("power-consumption.water.index");
+        return to_route('power-consumption.water.index');
     }
 
     public function edit(WaterConsumption $waterConsumption)
     {
-        return view("power-consumption::water.edit", compact("waterConsumption"));
+        return view('power-consumption::water.edit', compact('waterConsumption'));
     }
 
     public function update(WaterConsumption $waterConsumption, Request $request)
@@ -38,13 +38,13 @@ class WaterConsumptionController extends Controller
         // todo validate
         $waterConsumption->update($request->all());
 
-        return to_route("power-consumption.water.index");
+        return to_route('power-consumption.water.index');
     }
 
     public function destroy(WaterConsumption $waterConsumption)
     {
         $waterConsumption->delete();
 
-        return to_route("power-consumption.water.index");
+        return to_route('power-consumption.water.index');
     }
 }

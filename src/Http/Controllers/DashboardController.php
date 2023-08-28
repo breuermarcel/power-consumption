@@ -12,6 +12,6 @@ class DashboardController extends Controller
         $electricity = ElectricityConsumption::all();
         $water = WaterConsumption::all();
 
-        return view("power-consumption::dashboard", compact("electricity", "water"));
+        return view('power-consumption::dashboard', compact('electricity', 'water'));
     }
 }
