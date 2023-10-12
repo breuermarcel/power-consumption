@@ -25,7 +25,7 @@ class WaterConsumption extends Model
      */
     protected static function booted()
     {
-        static::addGlobalScope(new AuthUserScope);
+        static::addGlobalScope(new AuthUserScope());
     }
 
     public function user()
